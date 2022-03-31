@@ -2,18 +2,18 @@
 import React, { useEffect, useState } from "react";
 
 const Fetching = () => {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    const loadImage = async () => {
-      const response = await fetch(
-        "https://api.generated.photos/api/v1/faces?api_key=BEUHTLfJloFeCNWcfIdhrw"
-      );
+  //   const [data, setData] = useState(null);
+  //   useEffect(() => {
+  //     const loadImage = async () => {
+  //       const response = await fetch(
+  //         "https://api.generated.photos/api/v1/faces?api_key=BEUHTLfJloFeCNWcfIdhrw"
+  //       );
 
-      const resData = await response.json();
-      setData(resData);
-    };
-    loadImage();
-  }, []);
+  //       const resData = await response.json();
+  //       setData(resData);
+  //     };
+  //     loadImage();
+  //   }, []);
 
   return (
     <div>
@@ -27,7 +27,7 @@ const Fetching = () => {
             </div>
           );
         })} */}
-      {data &&
+      {/* {data &&
         data.faces.map((select) => {
           return (
             <div key={select.id}>
@@ -38,7 +38,7 @@ const Fetching = () => {
               />
             </div>
           );
-        })}
+        })} */}
     </div>
   );
 };
