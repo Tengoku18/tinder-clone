@@ -7,7 +7,7 @@ function TinderCards() {
   // useEffect(() => {
   //   const loadImage = async () => {
   //     const response = await fetch(
-  //       "https://api.generated.photos/api/v1/faces?api_key=HMYvc6YQH-9DXguJyTiOSw"
+  //       "https://api.generated.photos/api/v1/faces?api_key=pI6Ri_TraXHKKhQyV4BwzQ"
   //     );
   //     const data = await response.json();
   //     console.log("data", data);
@@ -41,12 +41,12 @@ function TinderCards() {
     console.log(name + "left the screen");
   };
   return (
-    <div className="tinder-cards mt-7 h-96 md:mt-14 lg:mt-20">
-      <div className="Tindercard-container h-full  flex justify-center  ">
+    <div className="tinder-cards  mt-7 h-96 md:mt-14 lg:mt-20">
+      <div className="Tindercard-container  h-full  flex justify-center  ">
         {people &&
           people.map((person) => (
             <TinderCard
-              className="w-10/12 md:w-2/4 lg:w-1/3 bg-white absolute  "
+              className="w-10/12 md:w-2/4 lg:w-1/3 bg-white absolute rounded-xl  "
               key={person.id}
               preventSwipe={["up", "down"]}
               onSwipe={(dir) => swiped(dir, person.name)}
@@ -57,7 +57,6 @@ function TinderCards() {
                 className="h-96  bg-white relative  bg-cover bg-center rounded-xl shadow-lg"
                 style={{ backgroundImage: `url(${person.url})` }}
               >
-                {console.log("i am inside", person.url)}
                 <h1 className="text-white absolute bottom-2 left-2 ">
                   {" "}
                   {person.name}{" "}
