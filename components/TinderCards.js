@@ -42,6 +42,7 @@ function TinderCards() {
   };
   return (
     <div className="tinder-cards  mt-7 h-96 md:mt-14 lg:mt-20">
+    <h1> Test CI/CD </h1>
       <div className="Tindercard-container  h-full  flex justify-center  ">
         {people &&
           people.map((person) => (
